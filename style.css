@@ -52,7 +52,6 @@ body {
     background-color: #efefef;
 }
 
-/* Desktop Search Bar with Font Awesome Icon */
 .desktop-search {
     position: relative;
     flex: 1;
@@ -72,7 +71,7 @@ body {
 
 .desktop-search input {
     width: 100%;
-    padding: 12px 20px 12px 48px; /* Extra left padding for icon */
+    padding: 12px 20px 12px 48px;
     border: none;
     border-radius: 30px;
     background-color: #efefef;
@@ -88,10 +87,6 @@ body {
     font-size: 26px;
     color: #fff;
     text-decoration: none;
-}
-
-.mobile-search-icon i {
-    display: block;
 }
 
 .icons {
@@ -188,6 +183,21 @@ body {
     transform: translateY(0);
 }
 
+.caption {
+    padding: 12px 15px 15px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.caption p {
+    margin-bottom: 8px;
+}
+
+.hashtags {
+    color: #767676;
+    font-size: 13px;
+}
+
 /* Mobile-specific dark mode */
 @media (max-width: 768px) {
     body {
@@ -217,20 +227,14 @@ body {
         display: block;
     }
 
-    .mobile-search-icon i {
-        color: #fff;
-    }
-
-    .icon i {
+    .mobile-search-icon i,
+    .icon i,
+    .profile i {
         color: #fff;
     }
 
     .profile {
         background-color: #333;
-    }
-
-    .profile i {
-        color: #fff;
     }
 
     .icons {
@@ -248,4 +252,36 @@ body {
     }
 
     .overlay {
-        background: linear-gradient(to top, rgba(0,0,0,0.8), transparent 30
+        background: linear-gradient(to top, rgba(0,0,0,0.8), transparent 30%);
+    }
+
+    .save-btn {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .caption {
+        color: #ddd;
+    }
+
+    .hashtags {
+        color: #aaa;
+    }
+
+    .masonry-grid {
+        column-count: 2;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+    .masonry-grid { column-count: 4; }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+    .masonry-grid { column-count: 3; }
+}
+
+@media (max-width: 480px) {
+    .masonry-grid { column-count: 1; }
+    }
