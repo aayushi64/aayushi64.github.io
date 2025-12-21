@@ -138,10 +138,13 @@ body {
     z-index: 10;
 }
 
-.pin img {
+.pin img,
+.video-element {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
+    border-radius: 16px;
 }
 
 .overlay {
@@ -284,4 +287,4 @@ body {
 
 @media (max-width: 480px) {
     .masonry-grid { column-count: 1; }
-    }
+}
