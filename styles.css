@@ -109,6 +109,21 @@ body {
     color: #767676;
 }
 
+.notification-icon {
+    position: relative;
+}
+
+.notification-icon::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 8px;
+    height: 8px;
+    background-color: #e60023;
+    border-radius: 50%;
+}
+
 .bottom-nav {
     display: none;
 }
@@ -123,7 +138,7 @@ body {
 .pin {
     break-inside: avoid;
     margin-bottom: 20px;
-    border-radius: 24px; /* Strong curved edges */
+    border-radius: 24px;
     overflow: hidden;
     position: relative;
     background-color: white;
@@ -133,7 +148,7 @@ body {
 }
 
 .pin:hover {
-    transform: translateY(-12px);
+    transform: translateY(-8px);
     box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 }
 
@@ -141,6 +156,23 @@ body {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
+    transition: filter 0.4s ease, transform 0.6s ease;
+}
+
+.pin:hover img {
+    filter: brightness(0.9);
+    transform: scale(1.05);
+}
+
+/* Varied pin heights for staggered masonry */
+.tall-pin img {
+    height: 450px;
+    object-fit: cover;
+}
+
+.medium-pin img {
+    height: 350px;
     object-fit: cover;
 }
 
@@ -150,7 +182,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.4), transparent 30%);
+    background: linear-gradient(to top, rgba(0,0,0,0.3), transparent 30%);
     opacity: 0;
     transition: opacity 0.4s ease;
     display: flex;
@@ -176,7 +208,6 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-/* 3-dots More Options */
 .more-options {
     position: relative;
 }
@@ -192,7 +223,7 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    opacity: 0;
+    opacity: 0.6; /* Slightly visible always */
     transition: opacity 0.3s;
 }
 
@@ -238,12 +269,19 @@ body {
 }
 
 .caption {
-    padding: 12px 15px 15px;
+    padding: 12px 15px 8px;
     font-size: 14px;
     line-height: 1.4;
 }
 
-/* Mobile dark mode & layout */
+.source {
+    display: block;
+    font-size: 12px;
+    color: #767676;
+    margin-top: 4px;
+}
+
+/* Mobile dark mode & enhancements */
 @media (max-width: 768px) {
     body {
         background-color: #000;
@@ -274,6 +312,10 @@ body {
         background-color: #333;
     }
 
+    .notification-icon::after {
+        background-color: #e60023;
+    }
+
     .pin {
         background-color: #111;
         border-radius: 20px;
@@ -286,6 +328,11 @@ body {
 
     .more-options i {
         background: rgba(255,255,255,0.3);
+        opacity: 0.7;
+    }
+
+    .pin:hover .more-options i {
+        opacity: 1;
     }
 
     .options-menu {
@@ -304,6 +351,10 @@ body {
         color: #ddd;
     }
 
+    .source {
+        color: #aaa;
+    }
+
     .masonry-grid {
         column-count: 2;
         padding: 10px;
@@ -318,17 +369,18 @@ body {
         width: 100%;
         background: #111;
         justify-content: space-around;
-        padding: 12px 0;
+        padding: 14px 0;
         border-top: 1px solid #333;
         z-index: 100;
     }
 
     .bottom-icon {
-        font-size: 24px;
+        font-size: 28px;
         color: #888;
     }
 
-    .bottom-icon.active {
+    .bottom-icon.active,
+    .bottom-icon:hover {
         color: #e60023;
     }
 }
@@ -337,4 +389,4 @@ body {
     .masonry-grid {
         column-count: 1;
     }
-}
+    }
