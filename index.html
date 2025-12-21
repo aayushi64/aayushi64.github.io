@@ -11,20 +11,21 @@
 </head>
 <body>
     <header class="header">
-        <div class="logo">Pinterest</div>
+        <a href="#" class="logo">
+            <img src="https://s.pinimg.com/webapp/logo-1x-0f5b9a36.png" alt="Pinterest" class="logo-img">
+        </a>
+
         <nav class="nav">
             <a href="#" class="nav-link active">Home</a>
             <a href="#" class="nav-link">Explore</a>
             <a href="#" class="nav-link">Create</a>
         </nav>
         
-        <!-- Desktop Search Bar with Icon -->
         <div class="search-bar desktop-search">
             <i class="fas fa-magnifying-glass search-icon"></i>
             <input type="text" placeholder="Search">
         </div>
         
-        <!-- Mobile Search Icon -->
         <a href="#" class="mobile-search-icon"><i class="fas fa-magnifying-glass"></i></a>
         
         <div class="icons">
@@ -34,33 +35,18 @@
         </div>
     </header>
 
+    <nav class="bottom-nav">
+        <a href="#" class="bottom-icon active"><i class="fas fa-home"></i></a>
+        <a href="#" class="bottom-icon"><i class="fas fa-magnifying-glass"></i></a>
+        <a href="#" class="bottom-icon"><i class="fas fa-plus"></i></a>
+        <a href="#" class="bottom-icon"><i class="far fa-bell"></i></a>
+        <a href="#" class="bottom-icon"><i class="far fa-user"></i></a>
+    </nav>
+
     <main class="masonry-grid">
-        <!-- Video Pin 1 -->
-        <div class="pin video-pin">
-            <video class="video-element" 
-                   poster="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" 
-                   muted loop playsinline autoplay>
-                <source src="https://player.vimeo.com/external/402094437.hd.mp4?s=7b6f5e7d7e0c4a3e8f8d8e8f8d8e8f8d&profile_id=175" type="video/mp4">
-            </video>
-            <div class="overlay">
-                <button class="save-btn">Save</button>
-                <div class="more-options">
-                    <i class="fas fa-ellipsis-h"></i>
-                    <div class="options-menu">
-                        <a href="#"><i class="fas fa-share"></i> Share</a>
-                        <a href="#"><i class="fas fa-link"></i> Copy link</a>
-                        <a href="#"><i class="fas fa-download"></i> Save</a>
-                    </div>
-                </div>
-            </div>
-            <div class="caption">
-                <p>Timelapse of majestic mountains under moving clouds ⛰️</p>
-            </div>
-        </div>
-
-        <!-- Image Pin -->
+        <!-- Replace the src with your actual image URLs -->
         <div class="pin">
-            <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e" alt="">
+            <img src="https://via.placeholder.com/600x800/fde4cf/333333?text=Weak+Hero+Class+1+Collage" alt="Weak Hero Class 1 moodboard">
             <div class="overlay">
                 <button class="save-btn">Save</button>
                 <div class="more-options">
@@ -73,96 +59,12 @@
                 </div>
             </div>
             <div class="caption">
-                <p>Serene lakes reflecting the beauty of nature ✨</p>
-            </div>
-        </div>
-
-        <!-- Video Pin 2 -->
-        <div class="pin video-pin">
-            <video class="video-element" 
-                   poster="https://images.unsplash.com/photo-1482190659162-04f266a1fe98" 
-                   muted loop playsinline autoplay>
-                <source src="https://player.vimeo.com/external/291648067.hd.mp4?s=4e7b8d8e8f8d8e8f8d8e8f8d8e8f8d8e&profile_id=174" type="video/mp4">
-            </video>
-            <div class="overlay">
-                <button class="save-btn">Save</button>
-                <div class="more-options">
-                    <i class="fas fa-ellipsis-h"></i>
-                    <div class="options-menu">
-                        <a href="#"><i class="fas fa-share"></i> Share</a>
-                        <a href="#"><i class="fas fa-link"></i> Copy link</a>
-                        <a href="#"><i class="fas fa-download"></i> Save</a>
-                    </div>
-                </div>
-            </div>
-            <div class="caption">
-                <p>Ocean waves crashing at sunset 🌊</p>
-            </div>
-        </div>
-
-        <!-- Image Pin -->
-        <div class="pin">
-            <img src="https://images.unsplash.com/photo-1551029506-0807add663f4" alt="">
-            <div class="overlay">
-                <button class="save-btn">Save</button>
-                <div class="more-options">
-                    <i class="fas fa-ellipsis-h"></i>
-                    <div class="options-menu">
-                        <a href="#"><i class="fas fa-share"></i> Share</a>
-                        <a href="#"><i class="fas fa-link"></i> Copy link</a>
-                        <a href="#"><i class="fas fa-download"></i> Save</a>
-                    </div>
-                </div>
-            </div>
-            <div class="caption">
-                <p>Forest paths leading to hidden wonders 🌿</p>
-            </div>
-        </div>
-
-        <!-- Video Pin 3 -->
-        <div class="pin video-pin">
-            <video class="video-element" 
-                   poster="https://images.unsplash.com/photo-1495467033336-2effd8753d51" 
-                   muted loop playsinline autoplay>
-                <source src="https://player.vimeo.com/external/357327646.hd.mp4?s=8f8d8e8f8d8e8f8d8e8f8d8e8f8d8e8f&profile_id=175" type="video/mp4">
-            </video>
-            <div class="overlay">
-                <button class="save-btn">Save</button>
-                <div class="more-options">
-                    <i class="fas fa-ellipsis-h"></i>
-                    <div class="options-menu">
-                        <a href="#"><i class="fas fa-share"></i> Share</a>
-                        <a href="#"><i class="fas fa-link"></i> Copy link</a>
-                        <a href="#"><i class="fas fa-download"></i> Save</a>
-                    </div>
-                </div>
-            </div>
-            <div class="caption">
-                <p>Waterfall flowing through lush forest 💦</p>
-            </div>
-        </div>
-
-        <!-- Additional Image Pins (repeat the same overlay + more-options for all) -->
-        <div class="pin">
-            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="">
-            <div class="overlay">
-                <button class="save-btn">Save</button>
-                <div class="more-options">
-                    <i class="fas fa-ellipsis-h"></i>
-                    <div class="options-menu">
-                        <a href="#"><i class="fas fa-share"></i> Share</a>
-                        <a href="#"><i class="fas fa-link"></i> Copy link</a>
-                        <a href="#"><i class="fas fa-download"></i> Save</a>
-                    </div>
-                </div>
-            </div>
-            <div class="caption">
-                <p>Lost in the beauty of rolling hills 🌾</p>
+                <p>Weak Hero Class 1 vibes 📚✏️</p>
             </div>
         </div>
 
         <div class="pin">
-            <img src="https://images.unsplash.com/photo-1570545887592-6519b340c515" alt="">
+            <img src="https://via.placeholder.com/600x600/fde4cf/333333?text=Psyduck+Burning+Laptop" alt="Psyduck stressed meme">
             <div class="overlay">
                 <button class="save-btn">Save</button>
                 <div class="more-options">
@@ -175,99 +77,11 @@
                 </div>
             </div>
             <div class="caption">
-                <p>Misty mornings in paradise 🌫️</p>
+                <p>When finals week hits 🔥💻</p>
             </div>
         </div>
 
-        <div class="pin">
-            <img src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b2a8" alt="">
-            <div class="overlay">
-                <button class="save-btn">Save</button>
-                <div class="more-options">
-                    <i class="fas fa-ellipsis-h"></i>
-                    <div class="options-menu">
-                        <a href="#"><i class="fas fa-share"></i> Share</a>
-                        <a href="#"><i class="fas fa-link"></i> Copy link</a>
-                        <a href="#"><i class="fas fa-download"></i> Save</a>
-                    </div>
-                </div>
-            </div>
-            <div class="caption">
-                <p>Epic waterfalls chasing dreams 💦</p>
-            </div>
-        </div>
-
-        <div class="pin">
-            <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29" alt="">
-            <div class="overlay">
-                <button class="save-btn">Save</button>
-                <div class="more-options">
-                    <i class="fas fa-ellipsis-h"></i>
-                    <div class="options-menu">
-                        <a href="#"><i class="fas fa-share"></i> Share</a>
-                        <a href="#"><i class="fas fa-link"></i> Copy link</a>
-                        <a href="#"><i class="fas fa-download"></i> Save</a>
-                    </div>
-                </div>
-            </div>
-            <div class="caption">
-                <p>Captured moments of pure tranquility ☁️</p>
-            </div>
-        </div>
-
-        <div class="pin">
-            <img src="https://images.unsplash.com/photo-1553355771-915d1be3399c" alt="">
-            <div class="overlay">
-                <button class="save-btn">Save</button>
-                <div class="more-options">
-                    <i class="fas fa-ellipsis-h"></i>
-                    <div class="options-menu">
-                        <a href="#"><i class="fas fa-share"></i> Share</a>
-                        <a href="#"><i class="fas fa-link"></i> Copy link</a>
-                        <a href="#"><i class="fas fa-download"></i> Save</a>
-                    </div>
-                </div>
-            </div>
-            <div class="caption">
-                <p>Endless horizons and endless possibilities 🌍</p>
-            </div>
-        </div>
-
-        <div class="pin">
-            <img src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24" alt="">
-            <div class="overlay">
-                <button class="save-btn">Save</button>
-                <div class="more-options">
-                    <i class="fas fa-ellipsis-h"></i>
-                    <div class="options-menu">
-                        <a href="#"><i class="fas fa-share"></i> Share</a>
-                        <a href="#"><i class="fas fa-link"></i> Copy link</a>
-                        <a href="#"><i class="fas fa-download"></i> Save</a>
-                    </div>
-                </div>
-            </div>
-            <div class="caption">
-                <p>Coffee and sunrise – perfect combo ☕🌄</p>
-            </div>
-        </div>
-
-        <div class="pin">
-            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401" alt="">
-            <div class="overlay">
-                <button class="save-btn">Save</button>
-                <div class="more-options">
-                    <i class="fas fa-ellipsis-h"></i>
-                    <div class="options-menu">
-                        <a href="#"><i class="fas fa-share"></i> Share</a>
-                        <a href="#"><i class="fas fa-link"></i> Copy link</a>
-                        <a href="#"><i class="fas fa-download"></i> Save</a>
-                    </div>
-                </div>
-            </div>
-            <div class="caption">
-                <p>Whispers of the wind in ancient trees 🍃</p>
-            </div>
-        </div>
+        <!-- You can duplicate more pins here with your own images -->
     </main>
 </body>
 </html>
