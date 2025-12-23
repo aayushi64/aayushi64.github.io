@@ -71,21 +71,26 @@ body {
     transform: translateY(-50%);
     font-size: clamp(16px, 3vw, 20px);
     color: #767676;
+    pointer-events: none;
+    z-index: 1;
 }
-
 .desktop-search input {
     width: 100%;
     height: 100%;
-    padding: 0 clamp(40px, 6vw, 60px) 0 clamp(12px, 2vw, 20px);
+    padding: clamp(8px, 1.5vw, 12px) clamp(12px, 2vw, 20px) clamp(8px, 1.5vw, 12px) clamp(40px, 6vw, 60px); /* top right bottom left */
     border: none;
     border-radius: 30px;
     background-color: #efefef;
     font-size: clamp(14px, 2vw, 16px);
+    text-align: center;
+    line-height: 1.2;
 }
 
 .desktop-search input::placeholder {
     color: #767676;
-}
+    opacity: 1;
+    text-align: center;
+} 
 
 .mobile-search-icon {
     display: none;
@@ -316,6 +321,8 @@ body {
 
     .icons {
         gap: 15px;
+        justify-content: flex-end;
+        padding-right: clamp(10px, 3vw, 20px);
     }
 
     .pin {
