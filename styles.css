@@ -253,7 +253,8 @@ body {
     background: white;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    overflow: hidden;
+    overflow-y: auto;
+    max-height: 80vh;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
@@ -333,6 +334,7 @@ body {
 
     .options-menu {
         background: #222;
+        max-height: 70vh;
     }
 
     .options-menu a {
@@ -376,4 +378,4 @@ body {
     .masonry-grid {
         column-count: 1;
     }
-        }
+}
