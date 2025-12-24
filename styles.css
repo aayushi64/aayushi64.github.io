@@ -94,6 +94,45 @@ body {
     color: #767676;
 }
 
+.icons {
+    display: flex;
+    gap: clamp(10px, 2vw, 20px);
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.icon {
+    font-size: clamp(20px, 4vw, 24px);
+    color: #767676;
+}
+
+.profile {
+    width: clamp(32px, 6vw, 40px);
+    height: clamp(32px, 6vw, 40px);
+    background-color: #efefef;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(16px, 3vw, 20px);
+    color: #767676;
+}
+
+.notification-icon {
+    position: relative;
+}
+
+.notification-icon::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 8px;
+    height: 8px;
+    background-color: #e60023;
+    border-radius: 50%;
+}
+
 .masonry-grid {
     margin-top: clamp(60px, 12vw, 80px);
     padding: clamp(10px, 3vw, 30px);
@@ -287,7 +326,8 @@ body {
     }
 
     .nav,
-    .desktop-search {
+    .desktop-search,
+    .icons {
         display: none;
     }
 
@@ -372,4 +412,4 @@ body {
     .masonry-grid {
         column-count: 1;
     }
-     }
+}
