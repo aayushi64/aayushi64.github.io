@@ -96,7 +96,7 @@ body {
 
 .search-bar input::placeholder {
     color: #767676;
-    text-align: center;
+    text-align: right;
     opacity: 1;
 }
 
