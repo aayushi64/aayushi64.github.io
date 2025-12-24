@@ -83,11 +83,13 @@ body {
 .search-bar input {
     width: 100%;
     height: 100%;
-    padding: 0 clamp(40px, 6vw, 60px) 0 clamp(12px, 2vw, 20px);
     border: none;
     border-radius: 30px;
     background-color: #efefef;
     font-size: clamp(14px, 2.8vw, 16px);
+    text-align: right;
+    padding: 0 clamp(12px, 2vw, 20px) 0 clamp(40px, 6vw, 60px);
+    
 }
 
 .search-bar input::placeholder {
@@ -338,6 +340,8 @@ body {
     .mobile-search-bar input {
         background-color: #333;
         color: #fff;
+        text-align: right;
+        padding: 0 clamp(12px, 2vw, 20px) 0 clamp(40px, 6vw, 60px);
     }
 
     .mobile-search-bar input::placeholder {
