@@ -317,6 +317,9 @@ body {
 
     .mobile-search-icon {
         display: block;
+        gap: 15px;
+        justify-content: flex-end;
+        padding-right: clamp(10px, 3vw, 20px);
     }
 
     .icons {
